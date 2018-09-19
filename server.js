@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 
-const airportsController = require('./controllers/airports.js');
-app.use('/airports', airportsController);
+const airport = require('./controllers/airports.js');
+app.use('/airports', airport);
 
 app.listen(3000, () => {
   console.log('listening');
