@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bunch = require('express-bunch-middleware');
-const getAirportData = require('./bin/airportdata.js');
+const getAirportData = require('./bin/airportData.js');
 const getAirportWeather = require('./bin/airportWeather.js');
 
 // express-bunch-middleware
