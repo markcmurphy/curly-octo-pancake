@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="AirportApp">
+
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+<script src="./js/app.js" charset="utf-8"></script>
+</head>
+
+<body ng-controller="MyController as ctrl">
+
+  {{4+4}}
+
+  <form ng-submit="ctrl.createReport()">
+    {{ctrl.airport_identifier}}
+    <input type="text" ng-model="ctrl.airport_identifier" placeholder="airport_identifier" />
+    <input type="submit" value="Create Airport" />
+  </form>
+
+  <div>
+    <div ng-repeat="airport in ctrl.airports.slice().reverse() track by $index" ng-init="ctrl.getWeatherByCity((KAUS))">
+      <div>
+        <ul>
+          <li><span class="spanNames">{{ctrl.airports.airport_identifier}}</span>
+
+          </li>
+
+          <!-- <li><span class="spanNames">Location:</span> {{hike.location}}</li>
+          <li><span class="spanNames">Description:</span> {{hike.description}}</li> -->
+        </ul>
+      </div>
+      <!-- <div class="col-sm-4">
+        <ul>
+          <li><span class="spanNames">Weather:</span> {{ctrl.cityTemps[hike.location]}}</li>
+          <li><span class="spanNames">Min Temp:</span> {{ctrl.min[hike.location]}}</li>
+          <li><span class="spanNames">Wind speeds:</span> {{ctrl.wind[hike.location]}}</li>
+        </ul>
+      </div> -->
+    </div>
+
+
+  </div>
+
+  <!-- <div  class="grid-container well" ng-init="ctrl.getWeatherByAirport()"> -->
+      <!-- <ul ng-repeat="weather in ctrl.weather track by $index"> -->
+        <!-- <li> -->
+          <!-- <h1>Weather: {{weather}}</h1> -->
+        <!-- </li> -->
+      <!-- </ul> -->
+  <!-- </div> -->
+
+</body>
+
+</html>
